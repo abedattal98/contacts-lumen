@@ -16,3 +16,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/contact','ContactController@index');
+$router->get('/contact/{id}','ContactController@show');
+$router->post('/contact','ContactController@create');
+$router->put('/contact/{id}','ContactController@update');
+$router->delete('/contact/{id}','ContactController@delete');
