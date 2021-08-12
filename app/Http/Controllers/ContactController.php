@@ -25,12 +25,12 @@ class ContactController extends Controller
 
         $contact->firstname = $request->firstname;
         $contact->lastname = $request->lastname;
-        $contact->price = $request->price;
+        $contact->phone = $request->phone;
         $contact->email = $request->email;
 
         $contact->save();
 
-        return response()->json($request);
+        return response()->json("Contact created successfully");
     }
     public function update(Request $request, $id)
     {
@@ -43,7 +43,7 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return response()->json("Contact created successfully");
+        return response()->json("Contact updated successfully");
     }
     public function delete($id)
     {
