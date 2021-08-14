@@ -38,7 +38,7 @@ class ContactController extends Controller
 
         $contact->firstname = $request->firstname;
         $contact->lastname = $request->lastname;
-        $contact->price = $request->price;
+        $contact->phone = $request->phone;
         $contact->email = $request->email;
 
         $contact->save();
